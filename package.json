@@ -1,0 +1,36 @@
+{
+  "name": "multiple-vue-page",
+  "version": "1.0.0",
+  "description": "A mutiple pages project \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[\u001b[C\u001bvue\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C of multiple pages",
+  "main": "index.js",
+  "dependencies": {
+    "vue": "^2.2.6",
+    "vue-router": "^2.4.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "webpack": "^2.3.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirkliu/multiple-vue-page.git"
+  },
+  "keywords": [
+    "vue",
+    "multiple-page\u001b[D\u001b[D\u001b[D\u001b[",
+    "\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D",
+    "vue",
+    "pages",
+    "vue",
+    "webpack"
+  ],
+  "author": "Jason Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dirkliu/multiple-vue-page/issues"
+  },
+  "homepage": "https://github.com/dirkliu/multiple-vue-page#readme"
+}
