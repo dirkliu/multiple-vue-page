@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <h1>首页</h1>
+    <h1>活动1</h1>
     <header>
-      <a href="activity.html">活动1</a>
+      <a href="index.html">首页</a>
     </header>
   </div>
 </template>

@@ -2,10 +2,13 @@ var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: './views/index/main.js',
+  entry: {
+    'index': './views/index/main',
+    'activity': './views/activity/main'
+  },
 
   output: {
-    path: 'dist',
+    path: path.resolve(__dirname, "dist"),
     filename: '[name].js'
   },
 
@@ -25,7 +28,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: './index.html',
-      template: 'pages/index.html'
+      template: 'pages/index.html',
+      chunks:['index']
+    }),
+
+    new HtmlWebpackPlugin({
+      filename: './activity.html',
+      template:'pages/activity.html',
+      chunks: ['activity']
     })
   ],
 
