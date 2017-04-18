@@ -9,16 +9,19 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: '[name].js'
+    filename: '[name]/[name].js'
   },
 
   module: {
     rules: [
       {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      }, {
       test: /\.js$/,
       exclude: /node_modules/,
       loader: "babel-loader"
-    },{
+    }, {
       test: /.vue$/,
       loader: "vue-loader"
     }
