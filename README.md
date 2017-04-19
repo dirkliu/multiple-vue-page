@@ -1,5 +1,5 @@
 # multiple-vue-page
-多页vue应用
+多页vue应用demo项目
 ## 参考资料
  * [饿了么前端构建工具cooking](http://elemefe.github.io/cooking/)
  * [github个人开元vue-multiple-pages](https://github.com/Plortinus/vue-multiple-pages)
