@@ -3,8 +3,8 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: {
-    'index': './views/index/main',
-    'activity': './views/activity/main'
+    'index': './index/main',
+    'activity': './activity/main'
   },
 
   output: {
@@ -36,13 +36,13 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: './index.html',
-      template: 'pages/index.html',
+      template: './index.html',
       chunks:['index']
     }),
 
     new HtmlWebpackPlugin({
       filename: './activity.html',
-      template:'pages/activity.html',
+      template:'./activity/index.html',
       chunks: ['activity']
     })
   ],

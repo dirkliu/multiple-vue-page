@@ -7,7 +7,7 @@ Vue.use(MintUi)
 
 new Vue({
   el: '#app',
-  components: { 
+  components: {
     App
   },
   render (h) {
