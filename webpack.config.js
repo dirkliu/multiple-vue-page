@@ -15,7 +15,15 @@ module.exports = {
   module: {
     rules: [{
       test: /\.css$/,
-      loader: "style-loader!css-loader"
+      use: ['style-loader', 'css-loader',
+        {
+          loader: 'px2rem-loader',
+          query:{
+            remUnit: 36,
+            remPrecision: 8
+          }
+        }
+      ]
     }, {
       test: /\.js$/,
       exclude: /node_modules/,
