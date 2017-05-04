@@ -10,6 +10,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: '[name]/[name].js'
+    //对所有资源设置publicPath
+    // publicPath:'/'
   },
 
   module: {
@@ -36,7 +38,9 @@ module.exports = {
       loader: 'url-loader',
         query: {
           limit: 10000,
-          name: 'img/[name].[hash:7].[ext]'
+          name: '[path][name].[hash:7].[ext]',
+          //只对图片资源设置publicPath
+          publicPath: '/'
         }
     }]
   },
