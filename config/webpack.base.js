@@ -9,7 +9,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "../dist"),
     filename: '[name]/[name].js',
     //对所有资源设置publicPath
     publicPath:'/'
@@ -64,12 +64,5 @@ module.exports = {
       jQuery: "jquery",
       "window.jQuery": "jquery"
     })
-  ],
-
-  devServer: {
-    contentBase: path.join(__dirname),
-    port: 80,
-    open: true,
-    inline: true
-  }
+  ]
 }

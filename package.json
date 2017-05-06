@@ -4,8 +4,8 @@
   "description": "A mutiple pages project of vue.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "rimraf dist && webpack --config webpack.prod.js",
+    "dev": "webpack-dev-server --config config/webpack.dev.js",
+    "build": "rimraf dist && webpack --config config/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -48,7 +48,8 @@
     "url-loader": "^0.5.8",
     "vue-loader": "^11.3.4",
     "vue-template-compiler": "^2.2.6",
-    "webpack": "^2.4.1"
+    "webpack": "^2.4.1",
+    "webpack-merge": "^4.1.0"
   },
   "engines": {
     "node": ">= 4.0.0",
