@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -9,9 +10,9 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: '[name]/[name].js'
+    filename: '[name]/[name].js',
     //对所有资源设置publicPath
-    // publicPath:'/'
+    publicPath:'/'
   },
 
   module: {
@@ -38,9 +39,9 @@ module.exports = {
       loader: 'url-loader',
         query: {
           limit: 10000,
-          name: '[path][name].[hash:7].[ext]',
+          name: '[path][name].[hash:7].[ext]'
           //只对图片资源设置publicPath
-          publicPath: '/'
+          //publicPath: '/'
         }
     }]
   },
@@ -56,6 +57,12 @@ module.exports = {
       filename: './activity.html',
       template:'./activity/index.html',
       chunks: ['activity']
+    }),
+
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
     })
   ],
 

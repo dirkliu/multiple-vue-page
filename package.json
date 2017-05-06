@@ -4,8 +4,8 @@
   "description": "A mutiple pages project of vue.js",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "rimraf dist && webpack",
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "build": "rimraf dist && webpack --config webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/dirkliu/multiple-vue-page#readme",
   "dependencies": {
+    "jquery": "^3.2.1",
     "mint-ui": "^2.2.3",
     "vue": "^2.2.6",
     "vue-json-editor": "^1.0.1",
