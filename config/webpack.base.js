@@ -1,6 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var configJson = require('./config.json');
 
 module.exports = {
   entry: {
@@ -46,23 +47,13 @@ module.exports = {
     }]
   },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      filename: './index.html',
-      template: './index.html',
-      chunks:['index']
-    }),
-
-    new HtmlWebpackPlugin({
-      filename: './activity.html',
-      template:'./activity/index.html',
-      chunks: ['activity']
-    }),
-
+  plugins: configJson.map( (item)=> {
+    return new HtmlWebpackPlugin(item)
+  }).concat([
     new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery"
-    })
-  ]
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery"
+      })
+  ])
 }
