@@ -4,7 +4,7 @@ var baseWebpackConfig = require('./webpack.base')
 
 var webpackConfig = merge(baseWebpackConfig, {
   output: {
-    path: path.resolve(__dirname, "../dist"),
+    path: path.resolve(__dirname),
     filename: '[name]/[name].js',
     //对所有资源设置publicPath
     publicPath:'/'
