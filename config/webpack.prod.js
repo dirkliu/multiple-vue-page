@@ -3,6 +3,13 @@ var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base')
 
 module.exports = merge(baseWebpackConfig, {
+  output: {
+    path: path.resolve(__dirname, "../dist"),
+    filename: '[name]/[name].js',
+    //对所有资源设置publicPath
+    publicPath:'/'
+  },
+
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {

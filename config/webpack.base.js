@@ -9,13 +9,6 @@ module.exports = {
     'activity': './activity/main'
   },
 
-  output: {
-    path: path.resolve(__dirname, "../dist"),
-    filename: '[name]/[name].js',
-    //对所有资源设置publicPath
-    publicPath:'/'
-  },
-
   module: {
     rules: [{
       test: /\.css$/,
