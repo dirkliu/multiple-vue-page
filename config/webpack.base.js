@@ -1,6 +1,6 @@
-var path = require('path')
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var configJson = require('./config.json');
 
 module.exports = {
@@ -27,7 +27,10 @@ module.exports = {
       loader: "babel-loader"
     }, {
       test: /.vue$/,
-      loader: "vue-loader"
+      loader: "vue-loader",
+      options: {
+          extractCSS: true
+        }
     }, {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',
@@ -47,6 +50,7 @@ module.exports = {
         $: "jquery",
         jQuery: "jquery",
         "window.jQuery": "jquery"
-      })
+      }),
+      new ExtractTextPlugin("style.css")
   ])
 }
