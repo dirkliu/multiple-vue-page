@@ -1,0 +1,12 @@
+[
+  {
+    "filename": "./index.html",
+    "template": "./src/index.html",
+    "chunks":["index"]
+  },
+  {
+    "filename": "./activity.html",
+    "template":"./src/activity.html",
+    "chunks": ["activity"]
+  }
+]
