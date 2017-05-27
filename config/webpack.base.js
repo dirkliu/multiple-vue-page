@@ -27,10 +27,10 @@ module.exports = {
       loader: "babel-loader"
     }, {
       test: /.vue$/,
-      loader: "vue-loader"
-      // options: {
-      //     extractCSS: true
-      //   }
+      loader: "vue-loader",
+      options: {
+          extractCSS: true
+        }
     }, {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
       loader: 'url-loader',
@@ -50,7 +50,9 @@ module.exports = {
         $: "jquery",
         jQuery: "jquery",
         "window.jQuery": "jquery"
+      }),
+      new ExtractTextPlugin({
+        filename: '[name].[contenthash].[id].css'
       })
-      //new ExtractTextPlugin("style.css")
   ])
 }
