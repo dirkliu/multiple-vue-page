@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import vueJsonEditor from 'vue-json-editor'
 export default {
   name: 'app',
   data () {
@@ -14,9 +13,6 @@ export default {
         name: 'liu77'
       }
     }
-  },
-  components: {
-    vueJsonEditor
   }
 }
 </script>

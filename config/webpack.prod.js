@@ -2,6 +2,7 @@ var webpack = require('webpack')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base')
 var path = require('path')
+var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 module.exports = merge(baseWebpackConfig, {
   output: {
@@ -19,6 +20,8 @@ module.exports = merge(baseWebpackConfig, {
       output: {
         comments: false,
       }
-    })
+    }),
+
+    new OptimizeCSSPlugin()
   ]
 })

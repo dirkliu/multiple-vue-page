@@ -2,12 +2,13 @@
   <div class="index">
     <h2>JSON EDITOR</h2>
     <vue-json-editor v-model="json"></vue-json-editor>
+    <main-view></main-view>
   </div>
 </template>
 
 <script>
 import vueJsonEditor from 'vue-json-editor'
-
+import mainView from './MainView.vue'
 export default {
   name: 'app',
   data () {
@@ -18,7 +19,8 @@ export default {
     }
   },
   components: {
-    vueJsonEditor
+    vueJsonEditor,
+    mainView
   }
 }
 </script>

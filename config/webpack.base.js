@@ -52,7 +52,7 @@ module.exports = {
         "window.jQuery": "jquery"
       }),
       new ExtractTextPlugin({
-        filename: '[name].[contenthash].[id].css'
+        filename: '[name]/[contenthash].[id].css'
       })
   ])
 }
