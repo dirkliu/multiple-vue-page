@@ -1,13 +1,19 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-var configJson = require('./config.json');
+var configJson = require('./config.json')
+var buildJson = require('./build.json')
+
+function getEntries (entries) {
+  var entry = {};
+  entries.forEach(item => {
+    entry[item] = './src/'+ item + '/main'
+  })
+  return entry;
+}
 
 module.exports = {
-  entry: {
-    'index': './src/index/main',
-    'activity': './src/activity/main'
-  },
+  entry: getEntries(buildJson),
 
   module: {
     rules: [{
@@ -43,9 +49,16 @@ module.exports = {
     }]
   },
 
-  plugins: configJson.map( (item)=> {
-    return new HtmlWebpackPlugin(item)
-  }).concat([
+  plugins: buildJson.map( item => new HtmlWebpackPlugin({
+    filename: './'+ item +'.html',
+    template:'./src/'+ item + '.html',
+    chunks: [item],
+    "minify": {
+        "removeComments": true,
+        "collapseWhitespace": true,
+        "removeAttributeQuotes": true
+      }
+  })).concat([
     new webpack.ProvidePlugin({
         $: "jquery",
         jQuery: "jquery",
