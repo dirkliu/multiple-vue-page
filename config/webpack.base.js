@@ -1,7 +1,6 @@
 var webpack = require('webpack')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
-var configJson = require('./config.json')
 var buildJson = require('./build.json')
 
 function getEntries (entries) {
