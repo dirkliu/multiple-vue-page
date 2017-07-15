@@ -24,7 +24,7 @@ export default {
   }
 }
 </script>
-<style>
+<style lang="scss">
   h2{
     font-size: 18px;
     color:#333;
