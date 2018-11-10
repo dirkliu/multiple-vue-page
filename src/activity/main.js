@@ -5,6 +5,7 @@ import MintUi from 'mint-ui'
 import router from './router'
 
 import 'mint-ui/lib/style.css'
+import './style/public.css'
 
 Vue.use(MintUi)
 
