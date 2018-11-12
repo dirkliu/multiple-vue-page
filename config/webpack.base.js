@@ -56,6 +56,7 @@ module.exports = {
   plugins: buildJson.map(item => new HtmlWebpackPlugin({
     filename: './' + item + '.html',
     template: './src/' + item + '.html',
+    inject: true,
     chunks: [item],
     "minify": {
       "removeComments": true,
