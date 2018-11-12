@@ -15,7 +15,14 @@ var webpackConfig = merge(baseWebpackConfig, {
     contentBase: path.join(__dirname),
     port: 80,
     open: true,
-    inline: true
+    inline: true,
+    proxy: {
+      // '/api': {
+      //   target: 'http://api.com',
+      //   changeOrigin: true,
+      //   secure: false
+      // }
+    }
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin()
