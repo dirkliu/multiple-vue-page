@@ -7,8 +7,8 @@
     "build": "./bin/build"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config config/webpack.dev.js",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js",
+    "dev": "webpack-dev-server --config build/webpack.dev.js",
+    "build": "node build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
