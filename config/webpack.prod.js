@@ -7,7 +7,7 @@ var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 module.exports = merge(baseWebpackConfig, {
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: '[name]/[hash:7].js',
+    filename: '[name]/[name][chunkhash].js',
     //对所有资源设置publicPath
     publicPath:'/'
   },
